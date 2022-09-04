@@ -1,0 +1,646 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="SpanishAthlete">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="编码规范空行 类声明和接口声明之间保留两个空行。   两个方法之间保留一个空行。   方法的第一条语句之前保留一个空行。   代码注释（尾端注释外） 之前保留一个空行。   一个方法内的两个逻辑段之间。   空格 赋值符号“&#x3D;”前后各有一个空格。    所有的二元运算符都应该使用空格与操作数分开。    一元操作符： 负号“-”、 自增“++”和自减“–”等， 它们与操作数之间没有空格。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaSE笔记">
+<meta property="og:url" content="https://spanishathlete.github.io/2022/10/03/JavaSE%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="SpanishAthlete&#39;s Blog">
+<meta property="og:description" content="编码规范空行 类声明和接口声明之间保留两个空行。   两个方法之间保留一个空行。   方法的第一条语句之前保留一个空行。   代码注释（尾端注释外） 之前保留一个空行。   一个方法内的两个逻辑段之间。   空格 赋值符号“&#x3D;”前后各有一个空格。    所有的二元运算符都应该使用空格与操作数分开。    一元操作符： 负号“-”、 自增“++”和自减“–”等， 它们与操作数之间没有空格。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-03T01:53:49.000Z">
+<meta property="article:modified_time" content="2022-09-03T12:38:29.572Z">
+<meta property="article:author" content="SpanishAthlete">
+<meta property="article:tag" content="JavaSE">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>JavaSE笔记 - SpanishAthlete&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"spanishathlete.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>SpanishAthlete&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="JavaSE笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+  </div>
+
+  <div class="mt-1">
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">JavaSE笔记</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="编码规范"><a href="#编码规范" class="headerlink" title="编码规范"></a>编码规范</h2><h3 id="空行"><a href="#空行" class="headerlink" title="空行"></a>空行</h3><ol>
+<li><p>类声明和接口声明之间保留两个空行。 </p>
+</li>
+<li><p>两个方法之间保留一个空行。 </p>
+</li>
+<li><p>方法的第一条语句之前保留一个空行。 </p>
+</li>
+<li><p>代码注释（尾端注释外） 之前保留一个空行。 </p>
+</li>
+<li><p>一个方法内的两个逻辑段之间。</p>
+</li>
+</ol>
+<h3 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h3><ol>
+<li><p>赋值符号“&#x3D;”前后各有一个空格。  </p>
+</li>
+<li><p>所有的二元运算符都应该使用空格与操作数分开。  </p>
+</li>
+<li><p>一元操作符： 负号“-”、 自增“++”和自减“–”等， 它们与操作数之间没有空格。  </p>
+</li>
+<li><p>小左括号“(”之后， 小右括号“)”之前不应有空格。   </p>
+</li>
+<li><p>大左括号“{”之前有一个空格。  </p>
+</li>
+<li><p>方法参数列表小左括号“(”之前没有空格， 小右括号“)”之后有一个空格， 参数列表中参数逗号“,”之后也有一个空格。   </p>
+</li>
+<li><p>关键字之后紧跟着小左括号“(”， 关键字之后应该有一个空格。</p>
+</li>
+</ol>
+<h3 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h3><ol>
+<li><p>在方法、 Lambda、 控制语句等包含大括号“{}”的代码块中， 代码块的内容相对于首行缩进一个级别（4个空格） 。  </p>
+</li>
+<li><p>如果是if语句中条件表达式的断行， 那么新的一行应该相对于上一行缩进两个级别（8个空格） ， 再往后的断行要与第一次的断行对齐。</p>
+</li>
+</ol>
+<h3 id="断行"><a href="#断行" class="headerlink" title="断行"></a>断行</h3><ol>
+<li><p>在一个逗号后面断开。  </p>
+</li>
+<li><p>在一个操作符前面断开， 要选择较高级别的运算符（而非较低级别的运算符） 断开。  </p>
+</li>
+<li><p>新的一行应该相对于上一行缩进两个级别（8个空格） 。</p>
+</li>
+</ol>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ol>
+<li><p>在声明变量或常量时推荐一行一个声明。   </p>
+</li>
+<li><p>每行至多包含一条语句。  </p>
+</li>
+<li><p>if、 for等控制语句只有一行代码情况下  ，不建议省略大括号。</p>
+</li>
+</ol>
+<h2 id="驼峰命名法"><a href="#驼峰命名法" class="headerlink" title="驼峰命名法"></a>驼峰命名法</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><ul>
+<li><p>一个单词：全部大写 IP</p>
+</li>
+<li><p>多个单词：全部大写，单词之间以下划线分割 MAX_VALUE</p>
+</li>
+</ul>
+<h3 id="变量-方法"><a href="#变量-方法" class="headerlink" title="变量 方法"></a>变量 方法</h3><ul>
+<li><p>一个单词：全部小写 number</p>
+</li>
+<li><p>多个单词：第一个单词首字母小写，其余单词首字母大写localVariable</p>
+</li>
+</ul>
+<h3 id="类-接口"><a href="#类-接口" class="headerlink" title="类 接口"></a>类 接口</h3><ul>
+<li>所有单词首字母大写 ThreadPoolExcutor</li>
+</ul>
+<h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><ul>
+<li>全部小写，域名反转 com.cskaoyan.name</li>
+</ul>
+<h2 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h2><p>二进制 前缀0b或0B，还可以加下划线使其更易读 0b1001_1001</p>
+<p>八进制 前缀0（易混淆，不建议用八进制）</p>
+<p>十进制 无</p>
+<p>十六进制 前缀0x或0X</p>
+<h2 id="计算机编码"><a href="#计算机编码" class="headerlink" title="计算机编码"></a>计算机编码</h2><p>原码：加符号位，正0负1</p>
+<p>反码：原码的非符号位按位取反（原码到补码转换的中间值）</p>
+<p>补码：正数就是其原码，负数为其非符号位按位取反后+1</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>有8种基本类型：4种整型，2种浮点型，1种字符型，1种布尔型</p>
+<p>有3种引用数据类型：类，接口，数组（class, interface, []）</p>
+<h3 id="整型（默认int）"><a href="#整型（默认int）" class="headerlink" title="整型（默认int）"></a>整型（默认int）</h3><ul>
+<li><p>byte    1字节 -128 ~ 127</p>
+</li>
+<li><p>short   2字节 -32768 ~ 32767</p>
+</li>
+<li><p>int        4字节 刚刚超过20亿</p>
+</li>
+<li><p>long     8字节 long型常量后缀尽量写大写L，避免与1混淆</p>
+</li>
+</ul>
+<h3 id="浮点（默认double）"><a href="#浮点（默认double）" class="headerlink" title="浮点（默认double）"></a>浮点（默认double）</h3><p>如果采用十进制表示指数， 需要使用大写或小写的e表示</p>
+<p>幂， e2表示10^2。如 3.14e2 表示3.14*10^2</p>
+<ul>
+<li><p>float     4字节 6-7位有效位 常量后缀写大写F</p>
+</li>
+<li><p>double 8字节 约15位有效位</p>
+</li>
+</ul>
+<h3 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h3><p>char c1 &#x3D; ‘A’;</p>
+<p>char c2 &#x3D; ‘\u0041’;  Java字符采用双字节Unicode编码， 占两个字节（16位） ， 因而可用十六进制（无符号的） 编码形式表</p>
+<p>示， 它们的表现形式是\un， 其中n为16位十六进制数， 所以’A’字符也可以用Unicode编码’\u0041’表示  </p>
+<p>转义字符：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">\<span class="hljs-string">&quot;双引号</span><br><span class="hljs-string">\&#x27;单引号</span><br><span class="hljs-string">\\反斜杠</span><br><span class="hljs-string">\b退格</span><br><span class="hljs-string">\t制表</span><br><span class="hljs-string">\n换行</span><br><span class="hljs-string">\r回车</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h3><p>只有 thru 和 false</p>
+<p>且数值型和布尔型不能相互转换</p>
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><ul>
+<li><p>boolean类型的值不能直接转化为其它数据类型的值</p>
+</li>
+<li><p>默认(自动)的转化 byte,short,char—&gt;int—&gt;long—&gt;float—&gt;double byte,short,char相互之间不转换，他们参与运算首先转换为 类型  </p>
+</li>
+<li><p>强制转化（截去高位） 目标类型 变量名&#x3D;(目标类型)(被转换的数据);</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@GetMapping(&quot;/queryStatus&quot;)</span><br><span class="hljs-keyword">public</span> ResponseData <span class="hljs-title function_">checkPay</span><span class="hljs-params">(<span class="hljs-meta">@RequestParam</span> String orderId)</span> &#123;<br><br>    <span class="hljs-type">PaymentRequest</span> <span class="hljs-variable">paymentRequest</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">PaymentRequest</span>();<br>    paymentRequest.setTradeNo(orderId);<br><br>    <span class="hljs-type">AlipayQueryRetResponse</span> <span class="hljs-variable">response</span> <span class="hljs-operator">=</span> payCoreService.queryAlipayRet(paymentRequest);<br>    <span class="hljs-keyword">if</span>(response.getCode().equals(PayRetCode.SUCCESS.getCode()))&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ResponseUtil</span>&lt;&gt;().setData(<span class="hljs-literal">null</span>);<br>    &#125;<br>    <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ResponseUtil</span>&lt;&gt;().setErrorMsg(response.getMsg());<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BC%96%E7%A8%8B/" class="category-chain-item">编程</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%BC%96%E7%A8%8B/Java/" class="category-chain-item">Java</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/JavaSE/">#JavaSE</a>
+      
+    </div>
+  
+</div>
+
+
+              
+
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

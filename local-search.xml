@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>VS2017的安装与使用</title>
+    <link href="/2022/11/03/VS2017%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <url>/2022/11/03/VS2017%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h3 id="需要安装的组件"><a href="#需要安装的组件" class="headerlink" title="需要安装的组件"></a>需要安装的组件</h3><p><img src="https://tcs.teambition.net/storage/312d5770f0287589070342801ddab0c22c94?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY2Mjc5NTg3NywiaWF0IjoxNjYyMTkxMDc3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmQ1NzcwZjAyODc1ODkwNzAzNDI4MDFkZGFiMGMyMmM5NCJ9.M6n1NTnWc_BMISV6YFviJKdBwTDQm9TZNstji5gB8wI&download=%E5%AE%89%E8%A3%85%E7%BB%84%E4%BB%B6.png"></p><h3 id="创建HelloWorld项目"><a href="#创建HelloWorld项目" class="headerlink" title="创建HelloWorld项目"></a>创建HelloWorld项目</h3><h3 id="调试窗口配置"><a href="#调试窗口配置" class="headerlink" title="调试窗口配置"></a>调试窗口配置</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>C/C++</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C/C++</tag>
+      
+      <tag>环境配置</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>JavaSE笔记</title>
+    <link href="/2022/10/03/JavaSE%E7%AC%94%E8%AE%B0/"/>
+    <url>/2022/10/03/JavaSE%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<h2 id="编码规范"><a href="#编码规范" class="headerlink" title="编码规范"></a>编码规范</h2><h3 id="空行"><a href="#空行" class="headerlink" title="空行"></a>空行</h3><ol><li><p>类声明和接口声明之间保留两个空行。 </p></li><li><p>两个方法之间保留一个空行。 </p></li><li><p>方法的第一条语句之前保留一个空行。 </p></li><li><p>代码注释（尾端注释外） 之前保留一个空行。 </p></li><li><p>一个方法内的两个逻辑段之间。</p></li></ol><h3 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h3><ol><li><p>赋值符号“&#x3D;”前后各有一个空格。  </p></li><li><p>所有的二元运算符都应该使用空格与操作数分开。  </p></li><li><p>一元操作符： 负号“-”、 自增“++”和自减“–”等， 它们与操作数之间没有空格。  </p></li><li><p>小左括号“(”之后， 小右括号“)”之前不应有空格。   </p></li><li><p>大左括号“{”之前有一个空格。  </p></li><li><p>方法参数列表小左括号“(”之前没有空格， 小右括号“)”之后有一个空格， 参数列表中参数逗号“,”之后也有一个空格。   </p></li><li><p>关键字之后紧跟着小左括号“(”， 关键字之后应该有一个空格。</p></li></ol><h3 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h3><ol><li><p>在方法、 Lambda、 控制语句等包含大括号“{}”的代码块中， 代码块的内容相对于首行缩进一个级别（4个空格） 。  </p></li><li><p>如果是if语句中条件表达式的断行， 那么新的一行应该相对于上一行缩进两个级别（8个空格） ， 再往后的断行要与第一次的断行对齐。</p></li></ol><h3 id="断行"><a href="#断行" class="headerlink" title="断行"></a>断行</h3><ol><li><p>在一个逗号后面断开。  </p></li><li><p>在一个操作符前面断开， 要选择较高级别的运算符（而非较低级别的运算符） 断开。  </p></li><li><p>新的一行应该相对于上一行缩进两个级别（8个空格） 。</p></li></ol><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ol><li><p>在声明变量或常量时推荐一行一个声明。   </p></li><li><p>每行至多包含一条语句。  </p></li><li><p>if、 for等控制语句只有一行代码情况下  ，不建议省略大括号。</p></li></ol><h2 id="驼峰命名法"><a href="#驼峰命名法" class="headerlink" title="驼峰命名法"></a>驼峰命名法</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><ul><li><p>一个单词：全部大写 IP</p></li><li><p>多个单词：全部大写，单词之间以下划线分割 MAX_VALUE</p></li></ul><h3 id="变量-方法"><a href="#变量-方法" class="headerlink" title="变量 方法"></a>变量 方法</h3><ul><li><p>一个单词：全部小写 number</p></li><li><p>多个单词：第一个单词首字母小写，其余单词首字母大写localVariable</p></li></ul><h3 id="类-接口"><a href="#类-接口" class="headerlink" title="类 接口"></a>类 接口</h3><ul><li>所有单词首字母大写 ThreadPoolExcutor</li></ul><h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><ul><li>全部小写，域名反转 com.cskaoyan.name</li></ul><h2 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h2><p>二进制 前缀0b或0B，还可以加下划线使其更易读 0b1001_1001</p><p>八进制 前缀0（易混淆，不建议用八进制）</p><p>十进制 无</p><p>十六进制 前缀0x或0X</p><h2 id="计算机编码"><a href="#计算机编码" class="headerlink" title="计算机编码"></a>计算机编码</h2><p>原码：加符号位，正0负1</p><p>反码：原码的非符号位按位取反（原码到补码转换的中间值）</p><p>补码：正数就是其原码，负数为其非符号位按位取反后+1</p><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>有8种基本类型：4种整型，2种浮点型，1种字符型，1种布尔型</p><p>有3种引用数据类型：类，接口，数组（class, interface, []）</p><h3 id="整型（默认int）"><a href="#整型（默认int）" class="headerlink" title="整型（默认int）"></a>整型（默认int）</h3><ul><li><p>byte    1字节 -128 ~ 127</p></li><li><p>short   2字节 -32768 ~ 32767</p></li><li><p>int        4字节 刚刚超过20亿</p></li><li><p>long     8字节 long型常量后缀尽量写大写L，避免与1混淆</p></li></ul><h3 id="浮点（默认double）"><a href="#浮点（默认double）" class="headerlink" title="浮点（默认double）"></a>浮点（默认double）</h3><p>如果采用十进制表示指数， 需要使用大写或小写的e表示</p><p>幂， e2表示10^2。如 3.14e2 表示3.14*10^2</p><ul><li><p>float     4字节 6-7位有效位 常量后缀写大写F</p></li><li><p>double 8字节 约15位有效位</p></li></ul><h3 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h3><p>char c1 &#x3D; ‘A’;</p><p>char c2 &#x3D; ‘\u0041’;  Java字符采用双字节Unicode编码， 占两个字节（16位） ， 因而可用十六进制（无符号的） 编码形式表</p><p>示， 它们的表现形式是\un， 其中n为16位十六进制数， 所以’A’字符也可以用Unicode编码’\u0041’表示  </p><p>转义字符：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">\<span class="hljs-string">&quot;双引号</span><br><span class="hljs-string">\&#x27;单引号</span><br><span class="hljs-string">\\反斜杠</span><br><span class="hljs-string">\b退格</span><br><span class="hljs-string">\t制表</span><br><span class="hljs-string">\n换行</span><br><span class="hljs-string">\r回车</span><br></code></pre></td></tr></table></figure><h3 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h3><p>只有 thru 和 false</p><p>且数值型和布尔型不能相互转换</p><h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><ul><li><p>boolean类型的值不能直接转化为其它数据类型的值</p></li><li><p>默认(自动)的转化 byte,short,char—&gt;int—&gt;long—&gt;float—&gt;double byte,short,char相互之间不转换，他们参与运算首先转换为 类型  </p></li><li><p>强制转化（截去高位） 目标类型 变量名&#x3D;(目标类型)(被转换的数据);</p></li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@GetMapping(&quot;/queryStatus&quot;)</span><br><span class="hljs-keyword">public</span> ResponseData <span class="hljs-title function_">checkPay</span><span class="hljs-params">(<span class="hljs-meta">@RequestParam</span> String orderId)</span> &#123;<br><br>    <span class="hljs-type">PaymentRequest</span> <span class="hljs-variable">paymentRequest</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">PaymentRequest</span>();<br>    paymentRequest.setTradeNo(orderId);<br><br>    <span class="hljs-type">AlipayQueryRetResponse</span> <span class="hljs-variable">response</span> <span class="hljs-operator">=</span> payCoreService.queryAlipayRet(paymentRequest);<br>    <span class="hljs-keyword">if</span>(response.getCode().equals(PayRetCode.SUCCESS.getCode()))&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ResponseUtil</span>&lt;&gt;().setData(<span class="hljs-literal">null</span>);<br>    &#125;<br>    <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ResponseUtil</span>&lt;&gt;().setErrorMsg(response.getMsg());<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>JavaSE</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2022/09/03/hello-world/"/>
+    <url>/2022/09/03/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
